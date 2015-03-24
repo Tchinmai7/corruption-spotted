@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:weightSum="1">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedrect"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="complaint"
+        android:id="@+id/button1"
+        android:layout_weight="0.15" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:background="@drawable/roundedrect"
+        android:gravity="center"
+        android:text="forum"
+        android:id="@+id/button2" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@drawable/roundedrect"
+        android:gravity="center"
+        android:text="reputation"
+        android:id="@+id/button3"
+        android:layout_weight="0.05" />
+</LinearLayout>
