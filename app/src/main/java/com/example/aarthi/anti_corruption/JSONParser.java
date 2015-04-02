@@ -35,7 +35,6 @@ public class JSONParser {
         // Making HTTP request
         try {
             // defaultHttpClient
-            Log.d("JSON","JSPN");
             DefaultHttpClient httpClient = new DefaultHttpClient();
             HttpPost httpPost = new HttpPost(url);
             httpPost.setEntity(new UrlEncodedFormEntity(params));

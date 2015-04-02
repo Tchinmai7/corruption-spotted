@@ -38,7 +38,7 @@ public class mainscreen extends Activity {
                 reputation.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i3=new Intent(mainscreen.this,GroundOverlayDemoActivity.class);
+                        Intent i3=new Intent(mainscreen.this,repmap.class);
                         startActivity(i3);
                     }
         });

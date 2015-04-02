@@ -54,8 +54,7 @@ public class Newuser extends Activity implements OnClickListener {
 				cpass.getText().equals("") || email.getText().equals("") || phno.getText().equals(""))
 		{
 		    	
-			Toast.makeText(this, "Please enter all fields!!!", Toast.LENGTH_LONG)
-			.show();
+			Toast.makeText(this, "Please enter all fields!!!", Toast.LENGTH_LONG).show();
 		}
 		
 	else if (pass.getText().toString().equals(cpass.getText().toString())) {
@@ -104,17 +103,12 @@ public class Newuser extends Activity implements OnClickListener {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}*/
-			
-			
-			
-			
-			
+
 			Intent i = new Intent(Newuser.this,Passcheck.class);
 			startActivity(i);
 			
 		} else
-			Toast.makeText(this, "Passwords do not match", Toast.LENGTH_LONG)
-					.show();
+			Toast.makeText(this, "Passwords do not match", Toast.LENGTH_LONG).show();
 	}
 	
 	@Override

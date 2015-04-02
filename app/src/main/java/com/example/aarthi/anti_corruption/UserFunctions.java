@@ -26,7 +26,6 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("Complaint", Complaint));
         json = jsonParser.getJSONFromUrl(loginURL, params);
         // return json
-         Log.d("JSON", json.toString());
         return json;
     }
 }

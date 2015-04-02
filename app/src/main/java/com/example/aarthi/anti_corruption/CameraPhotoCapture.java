@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import android.content.SharedPreferences;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
+import android.hardware.camera2.CameraCaptureSession;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -108,18 +109,19 @@ public  String encodedImage;
             public void onClick(View v) {
 
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+                mBitmap.compress(Bitmap.CompressFormat.JPEG, 60, baos);
                 byte[] imageBytes = baos.toByteArray();
                encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
-
                 // Getting user input location
-
-
                 loc = sp.getString("location", "null");
                 compla = sp.getString("complaint", "complaint");
                 sender s = new sender();
                 s.execute();
                 ed.commit();
+
+                Intent in=new Intent(CameraPhotoCapture.this,mainscreen.class);
+                startActivity(in);
+                finish();
 
             }
 

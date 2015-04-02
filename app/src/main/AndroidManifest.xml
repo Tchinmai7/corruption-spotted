@@ -40,6 +40,7 @@
         <activity android:name=".forumactivity"></activity>
         <activity android:name=".CameraPhotoCapture" >
         </activity>
+        <activity android:name=".repmap"></activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
