@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
     <!--
          The following two permissions are not required to use
          Google Maps Android API v2, but are recommended.
@@ -30,9 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".images"></activity>
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".SignUPActivity"></activity>
 
-        <activity android:name=".Newuser"></activity>
-        <activity android:name=".Passcheck"></activity>
         <activity android:name=".mainscreen"></activity>
         <activity android:name=".complaint"></activity>
         <activity android:name=".GroundOverlayDemoActivity" >
@@ -41,7 +44,8 @@
         <activity android:name=".CameraPhotoCapture" >
         </activity>
         <activity android:name=".repmap"></activity>
-
+<activity android:name=".callmsg"></activity>
+        <activity android:name=".Sms"></activity>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

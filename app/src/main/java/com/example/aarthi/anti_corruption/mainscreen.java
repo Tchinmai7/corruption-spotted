@@ -20,6 +20,7 @@ public class mainscreen extends Activity {
         final Button complaint = (Button) findViewById(R.id.button1);
         final Button forum = (Button) findViewById(R.id.button2);
         final Button reputation = (Button) findViewById(R.id.button3);
+        final Button call = (Button) findViewById(R.id.button4);
 
         complaint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +42,14 @@ public class mainscreen extends Activity {
                         Intent i3=new Intent(mainscreen.this,repmap.class);
                         startActivity(i3);
                     }
+        });
+
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i4=new Intent(mainscreen.this,callmsg.class);
+                startActivity(i4);
+            }
         });
 
     }

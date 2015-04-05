@@ -54,8 +54,18 @@
         android:id="@+id/button5"
         android:background="@drawable/round"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/showImg"
-        android:layout_alignStart="@+id/showImg" />
+        android:layout_alignRight="@+id/select"
+        android:layout_alignEnd="@+id/select" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select from gallery"
+        android:id="@+id/select"
+        android:background="@drawable/round"
+        android:layout_below="@+id/photo"
+        android:layout_toRightOf="@+id/message"
+        android:layout_toEndOf="@+id/message" />
 
 
 </RelativeLayout>

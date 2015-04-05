@@ -140,6 +140,7 @@ infolist=new ArrayList<>(10);
             tv2.setLayoutParams(params2);
             tv2.setTextSize(18);
             tv2.setText(s2);
+            tv2.setPadding(10,10,10,10);
             tv2.setTextColor(Color.parseColor("#bcbcbc"));
             cv.setId(idno);
             cv.setCardElevation(10);

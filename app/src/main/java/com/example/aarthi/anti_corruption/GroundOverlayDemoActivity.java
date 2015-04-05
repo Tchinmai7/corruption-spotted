@@ -88,6 +88,7 @@ public class GroundOverlayDemoActivity extends FragmentActivity
                 ed.putString("location",location);
                 ed.apply();
                 Intent i=new Intent(etLocation.getContext(),CameraPhotoCapture.class);
+                i.putExtra("image","");
                 startActivity(i);
                 finish();
 

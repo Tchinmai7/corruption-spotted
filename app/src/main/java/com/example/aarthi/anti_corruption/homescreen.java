@@ -23,7 +23,7 @@ public class homescreen extends Activity {
             public void run() {
 
                 Intent intent = new Intent(homescreen.this,
-                        Newuser.class);
+                        HomeActivity.class);
                 startActivity(intent);
 
                 homescreen.this.finish();

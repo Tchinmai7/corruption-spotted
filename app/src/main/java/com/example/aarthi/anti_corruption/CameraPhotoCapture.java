@@ -43,25 +43,48 @@ public  String encodedImage;
     //static TextView imageDetails      = null;
     public  static ImageView showImg  = null;
     CameraPhotoCapture CameraActivity = null;
-    Button b1,submit;
+    Button b1,submit,selection;
     public SharedPreferences sp;
     public SharedPreferences.Editor ed;
     public String  compla,loc;
     public Drawable d;
+    String img="";
+    Bitmap bitmap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_photo_capture);
         CameraActivity = this;
+         Intent intent=getIntent();
+        img=intent.getStringExtra("image");
+        showImg = (ImageView) findViewById(R.id.showImg);
 
+        if(!img.equals(""))
+        {
+          encodedImage=img;
+            byte[] decodedByte = Base64.decode(img, 0);
+           bitmap=BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
+            mBitmap=bitmap;
+            showImg.setImageBitmap(bitmap);
+            Log.d("tag","gddgd");
+        }
       //  imageDetail = (TextView) findViewById(R.id.imageDetails);
 
-        showImg = (ImageView) findViewById(R.id.showImg);
         b1=(Button) findViewById(R.id.photo);
         submit=(Button) findViewById(R.id.button5);
+        selection=(Button)findViewById(R.id.select);
         sp=getSharedPreferences("myapp",0);
         ed=sp.edit();
+
+        selection.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(CameraPhotoCapture.this,images.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
 
 
